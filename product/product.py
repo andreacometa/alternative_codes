@@ -48,6 +48,7 @@ class product_product(orm.Model):
         if name:
             args = ['|',
                     ('alternative_code', operator, '%' + name + '%')] + args
+        print args
         res = super(product_product, self).name_search(
             cr, user, name, args, operator='ilike', context=None, limit=100)
         return res

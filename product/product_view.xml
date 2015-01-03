@@ -2,63 +2,63 @@
 <openerp>
 <data>
 
-	<!-- ========================================================== -->
-	<!-- 				PRODUCT.CODICI_ALTERNATIVI					-->
-	<!-- ========================================================== -->
-	<record id="product_alternative_code_form" model="ir.ui.view">
-		<field name="name">product.alternative_code.form</field>
-		<field name="model">product.product</field>
-		<field name="type">form</field>
-		<field name="arch" type="xml">
-			<form string="Alternative Code">
-				<field name="name" colspan="4"/>
-			</form>
-		</field>
-	</record>
+    <!-- ========================================================== -->
+    <!-- 				PRODUCT.CODICI_ALTERNATIVI					-->
+    <!-- ========================================================== -->
+    <record id="product_alternative_code_form" model="ir.ui.view">
+        <field name="name">product.alternative_code.form</field>
+        <field name="model">product.product</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="Alternative Code">
+                <field name="name" colspan="4"/>
+            </form>
+        </field>
+    </record>
 
-	<!-- ========================================================== -->
-	<!-- 					PRODUCT.PRODUCT							-->
-	<!-- ========================================================== -->
+    <!-- ========================================================== -->
+    <!-- 					PRODUCT.PRODUCT							-->
+    <!-- ========================================================== -->
 
-	<record id="product_search_form_view_alternative_code" model="ir.ui.view">
-		<field name="name">product.product.search.alternative_code</field>
-		<field name="model">product.product</field>
-		<field name="inherit_id" ref="product.product_search_form_view"/>
-		<field name="arch" type="xml">
-			<field name="name" position="after" >
-				<field name="alternative_code" />
-			</field>
-		</field>
-	</record>
-	
-	<record id="product_product_tree_view_alternative_code" model="ir.ui.view">
-		<field name="name">product.product.tree.alternative_code</field>
-		<field name="model">product.product</field>
-		<field name="inherit_id" ref="product.product_product_tree_view"/>
-		<field name="arch" type="xml">
-			<field name="name" position="after" >
-				<field name="alternative_code"/>
-			</field>
-		</field>
-	</record>
-	
-	<record id="product_normal_form_view_alternative_code" model="ir.ui.view">
-		<field name="name">product.normal.form.alternative_code</field>
-		<field name="model">product.product</field>
-		<field name="inherit_id" ref="product.product_normal_form_view"/>
-		<field name="arch" type="xml">
-			<page string="Descriptions" position="after" >
-				<page string="Alternative Code">
-					<separator string="Alternative Code" colspan="4" />
-					<field name="alternative_code_ids" nolabel="1" colspan="4" >
-						<form>
-							<field name="name" colspan="4"/>
-						</form>
-					</field>
-				</page>
-			</page>
-		</field>
-	</record>
+    <record id="product_search_form_view_alternative_code" model="ir.ui.view">
+        <field name="name">product.product.search.alternative_code</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_search_form_view"/>
+        <field name="arch" type="xml">
+            <field name="name" position="after" >
+                <field name="alternative_code" />
+            </field>
+        </field>
+    </record>
+    
+    <record id="product_product_tree_view_alternative_code" model="ir.ui.view">
+        <field name="name">product.product.tree.alternative_code</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_product_tree_view"/>
+        <field name="arch" type="xml">
+            <field name="name" position="after" >
+                <field name="alternative_code"/>
+            </field>
+        </field>
+    </record>
+    
+    <record id="product_normal_form_view_alternative_code" model="ir.ui.view">
+        <field name="name">product.normal.form.alternative_code</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_normal_form_view"/>
+        <field name="arch" type="xml">
+            <page string="Sales" position="after" >
+                <page string="Alternative Codes">
+                    <separator string="Alternative Codes" colspan="4" />
+                    <field name="alternative_code_ids" nolabel="1" colspan="4" >
+                        <form>
+                            <field name="name" colspan="4"/>
+                        </form>
+                    </field>
+                </page>
+            </page>
+        </field>
+    </record>
 
 </data>
 </openerp>

@@ -1,0 +1,4 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+
+alternative_code_user,alternative_code user,model_product_alternative_code,group_alternative_code,1,1,1,1
+alternative_code_management,alternative_code management,model_product_alternative_code,group_alternative_code,1,1,1,1

@@ -46,8 +46,8 @@ class product_product(orm.Model):
     def name_search(self, cr, user, name, args=None, operator='ilike',
                     context=None, limit=100):
         if name:
-            args = ['|',
-                    ('alternative_code', operator, '%' + name + '%')] + args
+            args = args + ['|',
+                    ('alternative_code', operator, '%' + name + '%')]
         print args
         res = super(product_product, self).name_search(
             cr, user, name, args, operator='ilike', context=None, limit=100)

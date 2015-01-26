@@ -35,8 +35,6 @@ class product_alternative_code(orm.Model):
         'product_id': fields.many2one('product.product', 'Product'),
         }
 
-product_alternative_code()
-
 
 class product_product(orm.Model):
 
@@ -46,9 +44,8 @@ class product_product(orm.Model):
     def name_search(self, cr, user, name, args=None, operator='ilike',
                     context=None, limit=100):
         if name:
-            args = ['|',
-                    ('alternative_code', operator, '%' + name + '%')] + args
-        print args
+            args = args + ['|',
+                    ('alternative_code', operator, '%' + name + '%')]
         res = super(product_product, self).name_search(
             cr, user, name, args, operator='ilike', context=None, limit=100)
         return res
@@ -70,5 +67,3 @@ class product_product(orm.Model):
         'alternative_code_ids': fields.one2many(
             'product.alternative_code', 'product_id', 'Alternative Codes'),
         }
-
-product_product()
